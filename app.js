@@ -11,7 +11,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var sassMiddleware = require('node-sass-middleware');
 
-var json = require('./test_data.json');
+var json = require('./2015_data.json');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
@@ -43,7 +43,7 @@ app.use('/users', users);
  * and sends it back to my current view
  */
 app.use('/json', function (req, res, next) {
-  console.log(json);
+  //console.log(json);
   res.send(json);
 });
 

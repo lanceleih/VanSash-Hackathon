@@ -19,19 +19,23 @@ $(function() {
         //Iterate throuh each obj and return:
         //x,y coordinate of player in LAGalaxy that passed the ball without NotCompleted or lose and pass is greater than 10mts
         for(var i = 0; i < res.length; i++){
-            if(res[i].team === "LAGalaxy" && res[i].Action === "pass" && res[i].Result !== "NotCompleted" && res[i].Result !== "lose" && parseFloat(res[i].distance) > 10.0) {
+            if(res[i].team === "LAGalaxy" && res[i].Action === "pass" && res[i].Result !== "NotCompleted" && res[i].Result !== "lose" && parseFloat(res[i].distance) > 40.0) {
                 cleandata.coordinates.push({x : parseFloat(res[i].LocX), y:parseFloat(res[i].LocY)});
             }
         }
 
-        console.log(cleandata);
+        if (cleandata.coordinates.length > 1){
+            // console.log(cleandata);
+            console.log('Clean Data Loaded');
+        }
+
 
         var options = {
             high : 100,
             low : 0,
             divisor : 1,
             showLine : false,
-            showArea: true,
+            showArea: false,
             axisX: {
                 type: Chartist.AutoScaleAxis,
                 onlyInteger: true
