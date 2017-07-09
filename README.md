@@ -25,4 +25,11 @@ Technologies used:
 4) Use the "/views" folder to create partials if needed. I recommend you add your code to index.hbs (a partial is like a snipped of code that will
 get added to layout.hbs aka index.html, dynamically, using handlebars).
 
-I'LL ADD A TEST CHART IN ABOUT AN HOUR SO DON'T PANIC :) WE CAN BUILD UPON THE CHART IN A BIT (FUNCTIONS, ETC.)
+I'LL ADD A TEST CHART IN ABOUT AN HOUR SO DON'T PANIC :) WE CAN BUILD UPON THE CHART IN A BIT
+
+Info for me:
+    - add, commit, push changes to my local branch
+    - git merge with upstream/master
+    - git pull request
+    - git push
+    The above should safely merge my fork with origin
