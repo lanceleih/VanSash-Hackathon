@@ -15,15 +15,21 @@
 
       /*Coordinates*/
       function drawChart() {
-        //Testing.
+
+        //Testing. 
         /*var jsonData = $.ajax({
           url: "getData.php",
           dataType: "json",
           async: false
           }).responseText;*/
 
+
         // Create our data table out of JSON data loaded from server.
         var data = new google.visualization.DataTable(/*jsonData*/);
+
+
+
+        // For testing. Manually adding coordinates into the table.
         data.addColumn('number', 'LocationX');
         data.addColumn('number', 'LocationY');
 
@@ -31,7 +37,7 @@
           [90, 67], [11, 88], [22, 77],
           [33, 23], [45, 85], [5, 91],
           [66, 71], [67, 78], [8, 23],
-          [29, 80], [10, 82],[0, 75],
+          [29, 80], [10, 82],[10, 75],
           [35, 50], [53, 9], [1, 27],
           [15, 75], [6, 6], [7, 98],
           [36, 2], [9, 94], [2, 19],
@@ -39,6 +45,8 @@
           [4, 60], [92, 80], [6, 92],
           [82, 14], [78, 9], [29, 83]
         ]);
+
+
 
         /*Panel*/
         var options = {
@@ -52,11 +60,16 @@
           legend: 'none',
         };
 
+
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
 
         chart.draw(data, options);
       }
+
+
+
+
     </script>
   </head>
   <body>
