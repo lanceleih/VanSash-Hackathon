@@ -17,20 +17,20 @@
       function drawChart() {
 
         //Testing. 
-        /*var jsonData = $.ajax({
+        var jsonData = $.ajax({
           url: "getData.php",
           dataType: "json",
           async: false
-          }).responseText;*/
+          }).responseText;
 
 
         // Create our data table out of JSON data loaded from server.
-        var data = new google.visualization.DataTable(/*jsonData*/);
+        var data = new google.visualization.DataTable(jsonData);
 
 
 
         // For testing. Manually adding coordinates into the table.
-        data.addColumn('number', 'LocationX');
+        /*data.addColumn('number', 'LocationX');
         data.addColumn('number', 'LocationY');
 
         data.addRows([
@@ -44,7 +44,7 @@
           [82, 95], [21, 86], [31, 67],
           [4, 60], [92, 80], [6, 92],
           [82, 14], [78, 9], [29, 83]
-        ]);
+        ]);*/
 
 
 
