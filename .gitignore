@@ -16,9 +16,12 @@
 .idea/**/uiDesigner.xml
 
 # Sensitive Data From Hacka Files
+# To parse to remove spaces use: cat test_data2.json | tr -d '_' > test_data.json
 2015_data.json
 2016_data.json
 2017_data.json
+test_data.json
+test_data2.json
 
 # Gradle:
 .idea/**/gradle.xml
