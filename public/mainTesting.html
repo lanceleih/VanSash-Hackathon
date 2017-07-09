@@ -1,0 +1,66 @@
+
+<html>
+  <head>
+    
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+      
+      // Load the Visualization API and the piechart package.
+      google.charts.load('current', {'packages':['corechart']});
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+
+      /*Coordinates*/
+      function drawChart() {
+        //Testing.
+        /*var jsonData = $.ajax({
+          url: "getData.php",
+          dataType: "json",
+          async: false
+          }).responseText;*/
+
+        // Create our data table out of JSON data loaded from server.
+        var data = new google.visualization.DataTable(/*jsonData*/);
+        data.addColumn('number', 'LocationX');
+        data.addColumn('number', 'LocationY');
+
+        data.addRows([
+          [90, 67], [11, 88], [22, 77],
+          [33, 23], [45, 85], [5, 91],
+          [66, 71], [67, 78], [8, 23],
+          [29, 80], [10, 82],[0, 75],
+          [35, 50], [53, 9], [1, 27],
+          [15, 75], [6, 6], [7, 98],
+          [36, 2], [9, 94], [2, 19],
+          [82, 95], [21, 86], [31, 67],
+          [4, 60], [92, 80], [6, 92],
+          [82, 14], [78, 9], [29, 83]
+        ]);
+
+        /*Panel*/
+        var options = {
+          title: 'Location',
+          width: 800,
+          heigh: 500,
+          hAxis: {title: 'LocX', minValue: 0, maxValue: 100},
+          vAxis: {title: 'LocY', minValue: 0, maxValue: 100},
+          //backgroundColor: "Green",
+          colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
+          legend: 'none',
+        };
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+    
+  </body>
+</html>
