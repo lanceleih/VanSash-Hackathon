@@ -32,4 +32,4 @@ Info for me:
     - git merge with upstream/master
     - git pull request
     - git push
-    The above should safely merge my fork with origin
+    The above should safely merge my fork with origin. So confusing using forks!
